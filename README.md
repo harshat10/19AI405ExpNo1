@@ -1,6 +1,6 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: HARSHAT G </h3>
+<h3>Register Number: 212224040106</h3>
 
 
 <h3>AIM:</h3>
@@ -32,7 +32,7 @@
 <H3>DESIGN STEPS</H3>
 <h3>STEP 1:Identifying the input:</h3>
 <p>Temperature from patients, Location.</p>
-<h3>STEP 2:Identifying the output:</h3>
+<h3>STEP 2:Identclass VacuumCleanerAgent:
 <p>Prescribe medicine if the patient in a random has a fever.</p>
 <h3>STEP 3:Developing the PEAS description:</h3>
 <p>PEAS description is developed by the performance, environment, actuators, and sensors in an agent.</p>
@@ -40,3 +40,72 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+  
+## PROGRAM
+
+DEVELOPED BY:RAJKUMAR G
+
+REGISTER NUMBER: 212223230166
+  
+```python
+class VacuumCleanerAgent:
+    def __init__(self):
+        # Initialize the agent's state (location and dirt status)
+        self.location = "A"  # Initial location (can be "A" or "B")
+        self.dirt_status = {"A": False, "B": False}  # Initial dirt status (False means no dirt)
+
+    def move_left(self):
+        # Move the agent to the left if possible
+        if self.location == "B":
+            self.location = "A"
+
+    def move_right(self):
+        # Move the agent to the right if possible
+        if self.location == "A":
+            self.location = "B"
+
+    def suck_dirt(self):
+        # Suck dirt in the current location if there is dirt
+        if self.dirt_status[self.location]:
+            self.dirt_status[self.location] = False
+            print(f"Sucked dirt in location {self.location}")
+
+    def do_nothing(self):
+        # Do nothing
+        pass
+
+    def perform_action(self, action):
+        # Perform the specified action
+        if action == "left":
+            self.move_left()
+        elif action == "right":
+            self.move_right()
+        elif action == "suck":
+            self.suck_dirt()
+        elif action == "nothing":
+            self.do_nothing()
+        else:
+            print("Invalid action")
+
+    def print_status(self):
+        # Print the current status of the agent
+        print(f"Location: {self.location}, Dirt Status: {self.dirt_status}")
+
+# Example usage:
+agent = VacuumCleanerAgent()
+
+
+# Move the agent, suck dirt, and do nothing
+
+agent.perform_action("left")
+agent.print_status()
+agent.perform_action("suck")
+agent.print_status()
+agent.perform_action("nothing")
+agent.print_status()
+
+```
+
+## OUTPUT
+
+![425810495-d1198ba7-da19-413b-9907-4844afae627f](https://github.com/user-attachments/assets/93dd9d13-5be2-470d-9981-6cdc2d744ab6)
