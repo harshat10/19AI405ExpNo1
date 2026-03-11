@@ -109,3 +109,7 @@ agent.print_status()
 ## OUTPUT
 
 ![425810495-d1198ba7-da19-413b-9907-4844afae627f](https://github.com/user-attachments/assets/93dd9d13-5be2-470d-9981-6cdc2d744ab6)
+
+ ## RESULT 
+ Thus Developing AI Agent with PEAS Description is implimented using python 
+ 
